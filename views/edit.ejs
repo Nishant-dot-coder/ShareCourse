@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Course</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+        
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+form div {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header>Edit Course Description </header>
+    <p>This Course is shared by <%= chat.from %></p>
+
+    <form method="post" action="/chats/<%= chat.id %>?_method=PUT">
+        <textarea name="msg" rows="10" cols="50" id=""> <%= chat.msg %> </textarea> 
+        <br>
+        <button>Edit</button>
+    </form>
+
+</body>
+</html>

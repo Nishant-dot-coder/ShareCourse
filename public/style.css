@@ -1,0 +1,84 @@
+.body{
+    margin-left: 20px;
+}
+
+.chat{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 16px;
+border: 1px solid aquamarine;
+    display: inline-block;
+}
+.msg{
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+#post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+}
+
+.student-post {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+.student-post h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button { background-color: #007BFF;
+     color: white;
+      border: none; 
+      padding: 10px 20px; 
+      text-align: center; 
+      text-decoration: none; 
+      display: inline-block;
+       font-size: 16px; 
+       margin: 4px 2px; 
+       cursor: pointer; 
+       border-radius: 8px; 
+       transition-duration: 0.4s; }
+        /* Hover Effect */
+         button:hover 
+         { background-color: #0056b3;
+             color: white;
+         }
+
+         

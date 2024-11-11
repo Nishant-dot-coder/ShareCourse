@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareCourse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <h1>CourseShare</h1></header>
+    <main>
+        <form method="get" action="/chats/new">
+            <button>Add Course</button>
+        </form>
+        <div id="post-container">
+   
+  <%for(let chat of chats){ %>
+    <div class="student-post">
+        <div class="chat">
+            <p>From: <i> <%= chat.from %></i></p>
+
+            <div class="msg">
+                <p>Description: <%= chat.msg %></p>
+                <form  method="get" action="/chats/<%=  chat._id %>/edit">
+                    <button>Edit</button>
+                </form>
+            </div>
+           
+            <p>Contact : <i><%= chat.to %></i> </p>
+
+            <p><i><%= chat.created_at.toString().split(" ")[4] %></i> </p>
+            <p><i><%= chat.created_at.toString().split(" ").slice(0,4).join("-") %></i> </p>
+            <form  method="POST" action="/chats/<%=  chat._id %>?_method=DELETE">
+                <button>DELETE</button>
+            </form>
+        </div>
+        <br> <br>
+    </div>
+   <% } %> 
+</div>
+</main>
+<footer> 
+    <p>&copy; 2024 Student Course Sharing</p> 
+</footer>
+</body>
+</html>
