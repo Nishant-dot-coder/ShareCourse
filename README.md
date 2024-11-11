@@ -1,2 +1,2 @@
 # ShareCourse
-A voting platform where users can create and participate in polls.
+Build a platform where students can list courses they're willing to share and exchange or trade with others.
